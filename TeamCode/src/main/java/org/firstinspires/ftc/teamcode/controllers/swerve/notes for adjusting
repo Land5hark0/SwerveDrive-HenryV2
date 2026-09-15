@@ -1,0 +1,95 @@
+1. Wheel Positions (module locations)
+Code
+new Point2D(-6.732283, 4.76378)
+These numbers are the X/Y offsets of the module from the robot center, in inches.
+
+To change your wheelbase:
+
+Measure the distance from robot center to each module
+
+Replace these numbers for all four configs
+
+2. Angle Offset
+This is the second argument:
+
+Code
+0
+If your module’s “zero angle” is not straight forward, you adjust this.
+
+3. Servo Direction
+Third argument:
+
+Code
+Servo.Direction.REVERSE
+Leave this unless your servo spins the wrong way.
+
+4. Angle Sensor Direction
+Fourth argument:
+
+Code
+ServoCoaxialWheelConfig.AngleSenSorDirection.FORWARD
+Leave unless your analog angle sensor reads backwards.
+
+5. Steering Gear Ratio (THIS is what you asked about)
+This is the fifth argument:
+
+Code
+13.7
+This is your servo → module steering gear ratio.
+
+If you want a 4:1 ratio, you put:
+
+Code
+4.0
+If you want 6:1:
+
+Code
+6.0
+This is the exact place to change it.
+
+ 6. Drive Gear Ratio
+This is the sixth argument:
+
+Code
+105.0 / 32.0
+This is your drive motor → wheel gear ratio.
+
+Change this if your drive gearing is different.
+
+ 7. Wheel Diameter
+This is the seventh argument:
+
+Code
+20.0 / 54.0
+This is your wheel diameter in inches (converted through their internal scaling).
+
+If you want to set a normal FTC wheel (e.g., 96mm = 3.78in), you would replace this with:
+
+Code
+3.78
+ 8. Max Wheel Speed
+This is the last argument:
+
+Code
+2.5
+This is the maximum wheel speed (ft/s) used for Road Runner constraints.
+
+ Summary: Where to change everything
+Physical Value	Where to change it
+Wheel positions	new Point2D(x, y)
+Steering gear ratio	5th argument in ServoCoaxialWheelConfig
+Drive gear ratio	6th argument
+Wheel diameter	7th argument
+Angle offsets	2nd argument
+Servo direction	3rd argument
+Angle sensor direction	4th argument
+
+Everything is inside these four blocks:
+
+leftFront
+
+rightFront
+
+leftBack
+
+rightBack
