@@ -60,8 +60,8 @@ import java.util.List;
 @Config
 public class SwerveDrive {
     public static class Params{
-        public RevHubOrientationOnRobot.LogoFacingDirection logoFacingDirection = RevHubOrientationOnRobot.LogoFacingDirection.FORWARD;
-        public RevHubOrientationOnRobot.UsbFacingDirection usbFacingDirection = RevHubOrientationOnRobot.UsbFacingDirection.RIGHT;
+        public RevHubOrientationOnRobot.LogoFacingDirection logoFacingDirection = RevHubOrientationOnRobot.LogoFacingDirection.RIGHT;
+        public RevHubOrientationOnRobot.UsbFacingDirection usbFacingDirection = RevHubOrientationOnRobot.UsbFacingDirection.UP;
         public String[] unitNames = {"leftFront","rightFront","leftBack","rightBack"};
 
         public double maxWheelVel = 50;
@@ -95,20 +95,20 @@ public class SwerveDrive {
     public final AccelConstraint defaultAccelConstraint =
             new ProfileAccelConstraint(PARAMS.minProfileAccel, PARAMS.maxProfileAccel);
 
-    public static ServoCoaxialWheelConfig leftFront = new ServoCoaxialWheelConfig(new Point2D(-6.732283,4.76378),
+    public static ServoCoaxialWheelConfig leftFront = new ServoCoaxialWheelConfig(new Point2D(-5.90551,5.94488),
             0, Servo.Direction.REVERSE, ServoCoaxialWheelConfig.AngleSenSorDirection.FORWARD,
 //            3.61*5.23,21.0/54.0,20.0/54.0,3);
-                13.7,105.0/32.0,20.0/54.0,2.5);
-    public static ServoCoaxialWheelConfig rightFront = new ServoCoaxialWheelConfig(new Point2D(6.732283,4.76378),
+                3.5,105.0/32.0,1,2.59843);
+    public static ServoCoaxialWheelConfig rightFront = new ServoCoaxialWheelConfig(new Point2D(5.90551,5.94488),
             0, Servo.Direction.REVERSE, ServoCoaxialWheelConfig.AngleSenSorDirection.FORWARD,
-            13.7, 105.0/32.0, 20.0/54.0, 2.5);
-    public static ServoCoaxialWheelConfig leftBack = new ServoCoaxialWheelConfig(new Point2D(-6.732283,-4.76378),
+            3.5, 105.0/32.0, 1, 2.59843);
+    public static ServoCoaxialWheelConfig leftBack = new ServoCoaxialWheelConfig(new Point2D(-5.90551,-5.94488),
             0, Servo.Direction.REVERSE, ServoCoaxialWheelConfig.AngleSenSorDirection.FORWARD,
-            -13.7, 105.0/32.0, 20.0/54.0, 2.5);
+            3.5, 105.0/32.0, 1, 2.59843);
     //TODO REVERSEMOTOR
-    public static ServoCoaxialWheelConfig rightBack = new ServoCoaxialWheelConfig(new Point2D(6.732283,-4.76378),
+    public static ServoCoaxialWheelConfig rightBack = new ServoCoaxialWheelConfig(new Point2D(5.90551,-5.94488),
             0, Servo.Direction.REVERSE, ServoCoaxialWheelConfig.AngleSenSorDirection.FORWARD,
-            13.7, 105.0/32.0, 20.0/54.0, 2.5);
+            3.5, 105.0/32.0, 1, 2.59843);
     public static ServoCoaxialWheel.Params leftFrontParams = new ServoCoaxialWheel.Params()
             .withSP(0.8).withSI(0).withSD(0)
             .withMP(0.005).withMI(0).withMD(0.0)
