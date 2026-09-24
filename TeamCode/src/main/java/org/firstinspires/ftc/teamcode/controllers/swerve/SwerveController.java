@@ -33,7 +33,6 @@ public class SwerveController {
         ROADRUNNER
     }
     public static class Params {
-        //todo 调整参数
         public double maxV = 64; // 最大线速度 (m/s)
         public double maxA = 0.5; // 最大加速度 (m/s²)
         public double maxOmega = Math.PI * 5 / 2; // 最大角速度 (rad/s)
