@@ -25,6 +25,10 @@ public class SwerveTeleOp extends LinearOpMode {
             double x = gamepad1.left_stick_x;     // strafe
             double y = -gamepad1.left_stick_y;    // forward/back
             double turn = gamepad1.right_stick_x; // rotation
+            x = gamepad1.left_stick_x*gamepad1.left_stick_x*gamepad1.left_stick_x;
+            y = -gamepad1.left_stick_y*gamepad1.left_stick_y*gamepad1.left_stick_y;
+            turn = gamepad1.right_stick_x*gamepad1.right_stick_x*gamepad1.right_stick_x;
+
 
             // Build a PoseVelocity2d for SwerveDrive
             PoseVelocity2d command = new PoseVelocity2d(
