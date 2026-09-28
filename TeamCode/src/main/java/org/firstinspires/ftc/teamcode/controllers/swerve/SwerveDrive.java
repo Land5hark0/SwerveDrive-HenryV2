@@ -98,17 +98,17 @@ public class SwerveDrive {
     public static ServoCoaxialWheelConfig leftFront = new ServoCoaxialWheelConfig(new Point2D(-5.90551,5.94488),
             0, Servo.Direction.REVERSE, ServoCoaxialWheelConfig.AngleSenSorDirection.FORWARD,
 //            3.61*5.23,21.0/54.0,20.0/54.0,3);
-                3.5,105.0/32.0,1,2.59843);
+                1.55440415,105.0/32.0,1,2.59843);
     public static ServoCoaxialWheelConfig rightFront = new ServoCoaxialWheelConfig(new Point2D(5.90551,5.94488),
             0, Servo.Direction.REVERSE, ServoCoaxialWheelConfig.AngleSenSorDirection.FORWARD,
-            3.5, 105.0/32.0, 1, 2.59843);
+            1.55440415, 105.0/32.0, 1, 2.59843);
     public static ServoCoaxialWheelConfig leftBack = new ServoCoaxialWheelConfig(new Point2D(-5.90551,-5.94488),
             0, Servo.Direction.REVERSE, ServoCoaxialWheelConfig.AngleSenSorDirection.FORWARD,
-            3.5, 105.0/32.0, 1, 2.59843);
+            1.55440415, 105.0/32.0, 1, 2.59843);
     //TODO REVERSEMOTOR
     public static ServoCoaxialWheelConfig rightBack = new ServoCoaxialWheelConfig(new Point2D(5.90551,-5.94488),
             0, Servo.Direction.REVERSE, ServoCoaxialWheelConfig.AngleSenSorDirection.FORWARD,
-            3.5, 105.0/32.0, 1, 2.59843);
+            1.55440415, 105.0/32.0, 1, 2.59843);
     public static ServoCoaxialWheel.Params leftFrontParams = new ServoCoaxialWheel.Params()
             .withSP(0.8).withSI(0).withSD(0)
             .withMP(0.005).withMI(0).withMD(0.0)

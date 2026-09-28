@@ -8,7 +8,7 @@ import com.acmerobotics.roadrunner.Vector2d;
 
 import org.firstinspires.ftc.teamcode.controllers.swerve.SwerveDrive;
 
-@TeleOp(name="Swwrve TeleOp")
+@TeleOp(name="Swerve TeleOp")
 public class SwerveTeleOp extends LinearOpMode {
 
     @Override
